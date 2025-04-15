@@ -52,6 +52,43 @@
   font-weight: 500;
 }
 
+/* Dark mode toggle button styles */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--light-text);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.dark-mode-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+/* Dark mode specific styles */
+body.dark-mode {
+  --primary-color: #1a1a2e;
+  --secondary-color: #4d8bf0;
+  --background-color: #0f0f1a;
+  --card-background: #242444;
+  --light-text: #f0f0f0;
+  --dark-text: #f0f0f0;
+  --border-color: #444466;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
