@@ -1,0 +1,64 @@
+:root {
+  --primary-color: #1a1e2e;
+  --secondary-color: #3d5af1;
+  --accent-color: #e83a82;
+  --success-color: #22c55e;
+  --light-bg: #0f1120;
+  --dark-bg: #070816;
+  --text-color: #e2e8f0;
+  --light-text: #f8fafc;
+  --dark-text: #94a3b8;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: var(--dark-bg);
+  color: var(--accent-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+ul, ol {
+  list-style-position: inside;
+}
+
+/* Add smooth loading animations to create a polished feel */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

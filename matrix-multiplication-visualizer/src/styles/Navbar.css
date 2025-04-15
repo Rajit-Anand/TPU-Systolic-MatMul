@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-item button, .nav-item a {
+  background: transparent;
+  border: none;
+  color: var(--light-text);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all var(--transition-speed);
+}
+
+.nav-item button::after, .nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width var(--transition-speed);
+}
+
+.nav-item button:hover::after, .nav-item a:hover::after,
+.nav-item.active button::after, .nav-item.active a::after {
+  width: 100%;
+}
+
+.nav-item.active button, .nav-item.active a {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navbar-nav {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+} 
