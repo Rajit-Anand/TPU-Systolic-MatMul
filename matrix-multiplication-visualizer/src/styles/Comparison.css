@@ -1,0 +1,303 @@
+.comparison-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.comparison-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--light-text);
+}
+
+.comparison-header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.arch-column {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.arch-column:hover {
+  transform: translateY(-10px);
+  border-color: var(--secondary-color);
+}
+
+.arch-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.arch-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--light-text);
+}
+
+.arch-header p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.cpu-column .arch-header h2 {
+  color: var(--accent-color);
+}
+
+.gpu-column .arch-header h2 {
+  color: var(--secondary-color);
+}
+
+.tpu-column .arch-header h2 {
+  color: var(--success-color);
+}
+
+.metrics-section, .pros-cons-section, .use-cases-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--light-text);
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 1rem;
+}
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.metric-label {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.metric-value {
+  font-weight: bold;
+}
+
+.cpu-column .metric-value {
+  color: var(--accent-color);
+}
+
+.gpu-column .metric-value {
+  color: var(--secondary-color);
+}
+
+.tpu-column .metric-value {
+  color: var(--success-color);
+}
+
+.pros-cons-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.pros-cons-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: var(--text-color);
+}
+
+.pros-cons-list li:before {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.pros li:before {
+  content: "+";
+  color: var(--success-color);
+}
+
+.cons li:before {
+  content: "-";
+  color: var(--accent-color);
+}
+
+.use-cases-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.use-cases-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: var(--text-color);
+}
+
+.use-cases-list li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+.chart-section {
+  margin: 4rem 0;
+}
+
+.chart-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.chart-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--light-text);
+}
+
+.chart-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+.chart-container {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+}
+
+.bars-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 300px;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.bar {
+  width: 60px;
+  border-radius: 6px 6px 0 0;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.bar:hover {
+  filter: brightness(1.1);
+}
+
+.bar-label {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--light-text);
+}
+
+.bar-value {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: bold;
+  color: var(--light-text);
+}
+
+.cpu-bar {
+  background-color: var(--accent-color);
+  height: 100%;
+}
+
+.gpu-bar {
+  background-color: var(--secondary-color);
+  height: 25%;
+}
+
+.tpu-bar {
+  background-color: var(--success-color);
+  height: 50%;
+}
+
+.chart-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 2rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.cpu-legend {
+  background-color: var(--accent-color);
+}
+
+.gpu-legend {
+  background-color: var(--secondary-color);
+}
+
+.tpu-legend {
+  background-color: var(--success-color);
+}
+
+.legend-text {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bars-container {
+    height: 200px;
+  }
+} 

@@ -1,0 +1,131 @@
+.matrix-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.matrix-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.matrix-editor-header h3 {
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+.edit-btn, .save-btn, .cancel-btn, .matrix-presets button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+}
+
+.edit-btn:hover {
+  background-color: #2b48d1;
+}
+
+.save-btn {
+  background-color: var(--success-color);
+  color: var(--light-text);
+  margin-right: 0.5rem;
+}
+
+.save-btn:hover {
+  background-color: #1ca14b;
+}
+
+.cancel-btn {
+  background-color: var(--accent-color);
+  color: var(--light-text);
+}
+
+.cancel-btn:hover {
+  background-color: #cc2569;
+}
+
+.edit-actions {
+  display: flex;
+}
+
+.matrix-edit-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
+  margin-bottom: 1rem;
+}
+
+.matrix-edit-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.matrix-edit-cell:focus {
+  outline: 2px solid var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.matrix-presets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.matrix-presets span {
+  color: var(--text-color);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.matrix-presets button {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  font-size: 0.8rem;
+}
+
+.matrix-presets button:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .matrix-edit-cell {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  
+  .matrix-presets {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .edit-btn, .save-btn, .cancel-btn, .matrix-presets button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+} 
