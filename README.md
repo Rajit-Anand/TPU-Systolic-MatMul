@@ -2,6 +2,8 @@
 
 This project implements and simulates a TPU-inspired 8×8 systolic array accelerator in Verilog for matrix multiplication. The design focuses on accelerating deep learning computations by efficiently processing matrix operations using a systolic array architecture. In this design, **matrix A** (treated as the “weight” matrix) is fed horizontally from the left, and **matrix B** (treated as the “data” matrix) is fed vertically from the top.
 
+[Project Website](http://tpu-xi.vercel.app/)
+
 ## Overview
 
 The systolic array comprises 64 Processing Elements (PEs) arranged in an 8×8 grid. Each PE performs signed multiply-and-accumulate (MAC) operations in a pipelined fashion. The design capitalizes on parallelism and data reuse within the array to achieve a significant speedup over sequential processing.
